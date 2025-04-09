@@ -1,0 +1,40 @@
+{
+  "name": "evm-agent-kit",
+  "version": "0.1.0",
+  "description": "A toolkit enabling AI agents to interact with EVM ecosystems",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "test": "jest",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write 'src/**/*.ts'"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "evm",
+    "agents",
+    "defi",
+    "web3"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "eslint": "^8.38.0",
+    "jest": "^29.5.0",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ethers": "^6.3.0",
+    "viem": "^1.0.0",
+    "@openzeppelin/contracts": "^4.8.2"
+  }
+}

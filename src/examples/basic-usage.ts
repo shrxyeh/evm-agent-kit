@@ -1,4 +1,4 @@
-import { EvmKit } from "../src";
+import { EvmKit } from "../index";
 import * as dotenv from "dotenv";
 
 // Load environment variables

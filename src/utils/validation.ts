@@ -16,7 +16,7 @@ export class ValidationUtils {
         privateKey = "0x" + privateKey;
       }
 
-      // Check if key is valid by attempting to create a wallet
+      // Check if key is vali
       new ethers.Wallet(privateKey);
       return true;
     } catch (error) {

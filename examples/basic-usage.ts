@@ -1,12 +1,10 @@
-import { EvmKit } from "../index";
+import { EvmKit } from "../src/index";
 import * as dotenv from "dotenv";
 
-// Load environment variables
 dotenv.config();
 
 const privateKey = process.env.PRIVATE_KEY;
-const rpcUrl =
-  process.env.RPC_URL || "https://eth-mainnet.g.alchemy.com/v2/your-api-key";
+const rpcUrl = process.env.RPC_URL || "https://cloudflare-eth.com";
 
 // DAI token address on Ethereum mainnet
 const DAI_ADDRESS = "0x6B175474E89094C44Da98b954EedeAC495271d0F";
@@ -34,7 +32,7 @@ async function main() {
 
     console.log(`DAI Balance: ${balance} ${metadata.symbol}`);
 
-    // Check allowance (if we have a private key)
+    // Check allowance
     if (privateKey) {
       const signer = kit.getProviderManager().getSigner();
       const signerAddress = await signer.getAddress();
